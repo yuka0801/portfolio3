@@ -1,0 +1,59 @@
+@charset "utf-8";
+
+/*==================================================
+スライダーのためのcss
+===================================*/
+.slider-fv {
+  position:relative;
+	z-index: 1;
+	/*↑z-indexの値をh1のz-indexの値よりも小さくして背景に回す*/
+	height: 100vh;/*スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
+}
+/*　背景画像設定　*/
+
+.slider-fv-item07 {
+    background:url(../img/top_slide.jpg);
+}
+
+.slider-fv-item08 {
+    background:url(../img/top_slide2.jpg);
+}
+
+.slider-fv-item09 {
+    background:url(../img/top_slide3.jpg);
+}
+
+.slider-fv-item10 {
+    background:url(../img/top_slide4.jpg);
+}
+
+.slider-fv-item11 {
+    background:url(../img/kogen_slide.jpg);
+}
+
+.slider-fv-item12 {
+    background:url(../img/kogen_slide2.jpg);
+}
+
+.slider-fv-item13 {
+    background:url(../img/kogen_slide3.jpg);
+}
+
+.slider-fv-item14 {
+    background:url(../img/kogen_slide4.jpg);
+}
+
+
+.slider-fv-item {
+    width: 100%;/*各スライダー全体の横幅を画面の高さいっぱい（100%）にする*/
+    height:100vh;/*各スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
+    background-repeat: no-repeat;/*背景画像をリピートしない*/
+    background-position: center;/*背景画像の位置を中央に*/
+    background-size: cover;/*背景画像が.slider-item全体を覆い表示*/
+   
+}
+
+
+
+
+

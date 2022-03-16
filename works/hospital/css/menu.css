@@ -1,0 +1,156 @@
+@charset "utf-8";
+
+
+/*-----------------------
+共通
+-----------------------*/
+h2 {
+    background-color: #93BEE8;
+    border-top: 5px solid #2B78C6;
+    margin: 50px 0;
+}
+
+h3 {
+    margin-top: 30px;
+    font-size: 30px;
+}
+
+.blue-h4 {
+    background-color: #2B78C6;
+    color: #fff;
+    font-size: 20px;
+    /* width: 200px; */
+    /* text-align: center; */
+    display: inline-block;
+    padding: 0 30px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+
+.symp {
+    list-style: none;
+
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+.symp li::before {
+    font-family: "Font Awesome 5 Free";
+    content: '\f14a';
+    display: inline-block;
+    font-weight: 900;
+    color: #2B78C6;
+}
+
+/*-----------------------
+top-img
+-----------------------*/
+
+.top-img {
+    width: 100%;
+    background-image: url(../image/guide.png);
+    height: 250px;
+    background-position: center;
+}
+
+
+.top-img h1 {
+    color: #fff;
+    /* font-size: 40px; */
+    text-align: center;
+    line-height: 250px;
+}
+
+/*-----------------------
+.section-top
+-----------------------*/
+
+.top-h2 {
+    margin-top: 0;
+}
+
+/*-----------------------
+.section sick6
+-----------------------*/
+
+.lens {
+    background-color: #F7F2E2;
+    padding: 10px 30px;
+    border-radius: 20px;
+    margin: 30px 0;
+}
+
+.lens-h4 {
+    font-size: 22px;
+    color: #333;
+    text-align: center;
+}
+
+h5 {
+    font-size: 18px;
+    color: #333;
+    border-bottom: 2px solid #2B78C6;
+    display: inline-block;
+    margin: 5px 0 3px;
+}
+
+.lens li::before {
+    font-family: "Font Awesome 5 Free";
+    content: '\f14a';
+    display: inline-block;
+    font-weight: 900;
+    color: #2B78C6;
+}
+
+/*-----------------------
+footer
+-----------------------*/
+
+footer {
+    margin-top: 100px;
+}
+
+/*-----------------------
+レスポンシブ
+-----------------------*/
+
+@media (max-width:1100px) {
+    h2 {
+        font-size: 30px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+}
+
+/*-----------------------
+レスポンシブ 375
+-----------------------*/
+
+@media (max-width:375px) {
+    h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    .blue-h4,
+    .lens-h4 {
+        font-size: 16px;
+    }
+
+    h5 {
+        font-size: 16px;
+    }
+
+    .lens {
+        padding: 10px ;
+    }
+}

@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>しますえ眼科</title>
+
+  <meta name="description" content="広島市で目のことでお困りでしたら当院まで。些細なことであってもご気軽に当院までご相談ください。">
+
+  <!-- ress -->
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+
+  <!-- 自作css -->
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/contact.css">
+
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&family=Noto+Sans+JP:wght@400;500;700&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+
+  <meta name="robots" content="noindex,nofollow" />
+  <link rel="icon" type="image/png" href="image/favicon.png" />
+  <link rel="apple-touch-icon-precomposed" href="image/movileicon.png" />
+  <meta name="format-detection" content="email=no,telephone=no,address=no" />
+</head>
+
+<body>
+
+  <header>
+    <h1><a href="index.html"><img src="image/logo.png" alt="しますえ眼科" class="logo"></a></h1>
+    <nav id="gnavi" class="gnavi">
+      <ol class="menu">
+        <li class="menu__single"><a href="index.html"><img src="image/home.svg" alt="home画像" class="home-logo"><span class="span2">HOME</span></a>
+        </li>
+
+        <li class="menu__single">
+          <a href="clinic.html" class="init-bottom"><span class="span1">医院紹介</span><span class="span2">CLINIC</span></a>
+
+          <ul class="menu__second">
+            <li><a href="clinic.html">医院紹介</a></li>
+            <li><a href="clinic.html#greeting">院長あいさつ</a></li>
+            <li><a href="clinic.html#info">初めての方へ</a></li>
+            <li><a href="clinic.html#ask">よくあるご質問</a></li>
+          </ul>
+        </li>
+
+        <li class="menu__single">
+          <a href="menu.html" class="init-bottom"><span class="span1">診療案内</span><span class="span2">MENU</span></a>
+
+          <ul class="menu__second">
+            <li><a href="menu.html">診療のご案内</a></li>
+            <li><a href="menu.html#sick1">白内障について</a></li>
+            <li><a href="menu.html#sick2">緑内障について</a></li>
+            <li><a href="menu.html#sick3">加齢黄斑変性症について</a></li>
+            <li><a href="menu.html#sick4">糖尿病網膜症について</a></li>
+            <li><a href="menu.html#sick5">花粉症について</a></li>
+            <li><a href="menu.html#sick6">コンタクトについて</a></li>
+          </ul>
+        </li>
+
+        <li class="menu__single">
+          <a href="access.html"><span class="span1">アクセス</span><span class="span2">INFO</span></a>
+
+          <ul class="menu__second">
+            <li><a href="access.html#access">アクセス</a></li>
+            <li><a href="access.html#time">診療時間</a></li>
+          </ul>
+        </li>
+
+        <li class="menu__last">
+          <a href="contact.html" class="nav-contact">メール予約はこちらから</a>
+          <a href="#" class="nav-contact">0000- ○ ○ -1111</a>
+        </li>
+      </ol>
+    </nav>
+
+    <button class="menu-btn" id="menu-btn" type="button">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav id="gnavi2" class="gnavi2">
+      <ul class="gnavi2__list">
+        <li class="gnavi2__item"><a href="index.html" class="gnavi2__link">HOME</a></li>
+        <li class="gnavi2__item"><a href="clinic.html" class="gnavi2__link">医院紹介</a></li>
+        <li class="gnavi2__item"><a href="menu.html" class="gnavi2__link">診療案内</a></li>
+        <li class="gnavi2__item"><a href="access.html" class="gnavi2__link">アクセス</a></li>
+        <li class="gnavi2__item"><a href="contact.html" class="gnavi2__link">予約フォーム</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="wrapper">
+    <div class="contact-text">
+      <p>来院希望日の前日までご予約が可能です。</p>
+      <p>以下の項目に入力し、「予約」ボタンを押してください。</p>
+      <p>当日のご予約はお手数ですがお電話でご連絡下さい。</p>
+    </div>
+
+    <form action="#" method="post" name="contact-form">
+      <dl>
+        <div class="dl-inner">
+          <dt><label for="name">お名前<span>必須</span></label></dt>
+          <dd><input type="text" id="name" name="お名前" required placeholder="例）眼科太郎"></dd>
+        </div>
+
+        <div class="dl-inner">
+          <dt><label for="birthday">生年月日<span>必須</span></label></dt>
+          <dd>
+            <input type="number" name="year" id="birthday" placeholder="2020" min="1900" max="2022" value="1" >年
+
+            <select name="月">
+              <option value="">-</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+            </select>月
+            <select name="日">
+              <option value="">-</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+              <option value="24">24</option>
+              <option value="25">25</option>
+              <option value="26">26</option>
+              <option value="27">27</option>
+              <option value="28">28</option>
+              <option value="29">29</option>
+              <option value="30">30</option>
+              <option value="31">31</option>
+            </select>日
+          </dd>
+        </div>
+
+        <div class="dl-inner">
+          <dt>性別<span>必須</span></dt>
+          <dd>
+            <label><input type="radio" name="性別" value="男" checked>男</label>
+            <label><input type="radio" name="性別" value="女">女</label>
+          </dd>
+        </div>
+
+        <div class="dl-inner">
+          <dt><label for="tel">電話番号<span>必須</span></label></dt>
+          <dd><input type="tel" id="tel" name="電話番号" required placeholder="例）111-222-3333"></dd>
+        </div>
+
+        <div class="dl-inner">
+          <dt><label for="first">来院第一希望日<span>必須</span></label></dt>
+
+          <dd>
+            <select name="月" id="first">
+              <option value="">-</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+            </select>月
+
+            <select name="日">
+              <option value="">-</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+              <option value="24">24</option>
+              <option value="25">25</option>
+              <option value="26">26</option>
+              <option value="27">27</option>
+              <option value="28">28</option>
+              <option value="29">29</option>
+              <option value="30">30</option>
+              <option value="31">31</option>
+            </select>日
+
+            <select name="hour1" id="hour1">
+              <option value="">-</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+            </select>時
+
+            <select name="minute1" id="minute1">
+              <option value="">-</option>
+              <option value="0">00</option>
+              <option value="30">30</option>
+            </select>分
+
+            <p class="first-text">※休診日：木曜、土曜午後、日曜、祝日
+              ※最終受付は16:00までになります。<br>
+              診療日、受付時間内での選択をお願いいたします。<br>
+              時間外でのご予約は受けかねますのでご了承くださいませ。
+            </p>
+          </dd>
+        </div>
+
+        <div class="dl-inner">
+          <dt><label for="second">来院第二希望日</label></dt>
+
+          <dd>
+            <select name="月" id="second">
+              <option value="">-</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+            </select>月
+            <select name="日">
+              <option value="">-</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+              <option value="24">24</option>
+              <option value="25">25</option>
+              <option value="26">26</option>
+              <option value="27">27</option>
+              <option value="28">28</option>
+              <option value="29">29</option>
+              <option value="30">30</option>
+              <option value="31">31</option>
+            </select>日
+
+            <select name="hour2" id="hour2">
+              <option value="">-</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+            </select>時
+
+            <select name="minute2" id="minute2">
+              <option value="">-</option>
+              <option value="0">00</option>
+              <option value="30">30</option>
+            </select>分
+          </dd>
+        </div>
+
+        <div class="dl-inner">
+          <dt><label for="message">いつ頃から・症状<span>必須</span></label></dt>
+          <dd><textarea name="メッセージ" id="message" placeholder="ここに内容をご入力ください"></textarea></dd>
+        </div>
+      </dl>
+      <p class="button"><input type="submit" value="予約"></p>
+    </form>
+  </div><!-- wrapper -->
+
+  <footer>
+    <div class="footer-access">
+      <a href="index.html"><img src="image/logo2.png" alt="しますえ眼科ロゴ" class="logo2"></a>
+      <p>〒123-4567　***************************</p>
+      <p>広島市で目のことでお困りでしたら当院まで</p>
+      <small>&copy;SHIMASUE EYE CLINIC</small>
+    </div>
+
+    <div class="footer-nav">
+      <p>クリニック情報</p>
+      <ol>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="clinic.html">当院のご案内</a></li>
+        <li><a href="access.html">診察時間・アクセス</a></li>
+        <li><a href="clinic.html#info">初めての方へ</a></li>
+        <li><a href="menu.html">診療のご案内</a></li>
+      </ol>
+    </div>
+    <div class="footer-nav">
+      <p>症状別メニュー</p>
+      <ol>
+        <li><a href="menu.html#sick1">白内障について</a></li>
+        <li><a href="menu.html#sick2">緑内障について</a></li>
+        <li><a href="menu.html#sick3">加齢黄斑変性症について</a></li>
+        <li><a href="menu.html#sick4">糖尿病網膜症について</a></li>
+        <li><a href="menu.html#sick5">花粉症について</a></li>
+        <li><a href="menu.html#sick6">コンタクトについて</a></li>
+      </ol>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>

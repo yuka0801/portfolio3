@@ -1,0 +1,386 @@
+@charset 'utf-8';
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #414255;
+    background-color: #EBE3C6;
+    color: #333;
+    text-align: center;
+}
+
+
+img {
+    vertical-align: bottom;
+    max-width: 100%;
+}
+
+.wrapper {
+    max-width: 1260px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+
+/*-------------------------------
+header
+-------------------------------*/
+/* nav */
+
+.burger {
+    position: fixed;
+    right: 0;
+}
+
+.nav {
+    display: flex;
+    padding-top: 20px;
+}
+
+.nav li {
+    padding-right: 30px;
+}
+
+.nav li:hover {
+    transform: scale(1.1);
+    transition-duration: .3s;
+}
+
+.nav a {
+    color: #333;
+}
+
+.openbtn {
+    display: none;
+}
+
+/*-------------------------------
+section.menu
+-------------------------------*/
+
+.menu {
+    padding: 200px 0 150px;
+}
+
+.menu h2 {
+    margin-bottom: 100px;
+}
+
+.menu ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 100px 30px;
+}
+
+.menu li img:hover {
+    transform: scale(1.1);
+    transition-duration: .3s;
+}
+
+.menu p {
+    margin-top: 30px;
+}
+
+.menu p:nth-of-type(2) {
+    margin-top: 10px;
+}
+
+
+/*-------------------------------
+section.veg
+-------------------------------*/
+
+.veg {
+    background-color: #fff;
+    padding: 150px 0;
+}
+
+.veg h2 {
+    margin-bottom: 100px;
+}
+
+.veg ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 100px 30px;
+}
+
+.veg li:nth-of-type(1),
+.veg li:nth-of-type(2) {
+    position: relative;
+}
+
+.veg li:nth-of-type(1)::before,
+.veg li:nth-of-type(2)::before {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-image: url(../img/flag.png);
+    background-size: contain;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+}
+
+.veg p {
+    margin-top: 30px;
+}
+
+.veg p:nth-of-type(2) {
+    margin-top: 10px;
+}
+
+/*-------------------------------
+section.info
+-------------------------------*/
+.info {
+    background-color: #0C5013;
+    color: #EBE3C6;
+    padding-top: 150px;
+    padding-bottom: 100px;
+}
+
+.info-title {
+    font-size: 40px;
+    line-height: 2;
+    font-weight: bold;
+}
+
+.info-flex {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-around;
+    line-height: 2;
+}
+
+.info-flex img {
+    width: 50%;
+}
+
+.info-left p {
+    margin-bottom: 10px;
+}
+
+address {
+    margin-top: 50px;
+    font-style: normal;
+}
+
+/*-------------------------------
+footer
+-------------------------------*/
+footer {
+    margin: 50px 0 30px;
+    text-align: center;
+}
+
+footer img {
+    margin-bottom: 30px;
+}
+
+small {
+    display: block;
+}
+
+
+
+
+/*-------------------------------
+rレスポンシブ　630〜
+-------------------------------*/
+@media (max-width: 630px) {
+
+
+    /* nav */
+
+    .nav a {
+        color: #fff;
+    }
+
+    /* MENUがCLOSEに*/
+
+    /*ボタン外側※レイアウトによってpositionや形状は適宜変更してください*/
+    .openbtn {
+        display: block;
+        /*ボタン内側の基点となるためrelativeを指定。
+  追従するナビゲーションの場合はfixed＋top、rightといった位置をセットで指定*/
+        position: relative;
+        /* background: #FA7777; */
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        border-radius: 5px;
+    }
+
+    /*ボタン内側*/
+    .openbtn span {
+        display: inline-block;
+        transition: all .4s;
+        /*アニメーションの設定*/
+        position: absolute;
+        left: 14px;
+        height: 2px;
+        border-radius: 5px;
+        background: #333;
+        width: 45%;
+    }
+
+
+    .openbtn span:nth-of-type(1) {
+        top: 13px;
+    }
+
+    .openbtn span:nth-of-type(2) {
+        top: 19px;
+    }
+
+    .openbtn span:nth-of-type(3) {
+        top: 25px;
+    }
+
+    .openbtn span:nth-of-type(3)::after {
+        content: "Menu";
+        /*3つ目の要素のafterにMenu表示を指定*/
+        position: absolute;
+        top: 5px;
+        left: -2px;
+        color: #333;
+        font-size: 0.6rem;
+        text-transform: uppercase;
+    }
+
+    /*activeクラスが付与されると線が回転して×になり、Menu⇒Closeに変更*/
+
+    .openbtn.active {
+        position: absolute;
+        right: 0;
+    }
+
+
+    .openbtn.active span:nth-of-type(1) {
+        background: #fff;
+        top: 14px;
+        left: 18px;
+        transform: translateY(6px) rotate(-45deg);
+        width: 30%;
+    }
+
+    .openbtn.active span:nth-of-type(2) {
+        opacity: 0;
+    }
+
+    .openbtn.active span:nth-of-type(3) {
+        background: #fff;
+        top: 26px;
+        left: 18px;
+        transform: translateY(-6px) rotate(45deg);
+        width: 30%;
+    }
+
+    .openbtn.active span:nth-of-type(3)::after {
+        content: "Close";
+        /*3つ目の要素のafterにClose表示を指定*/
+        transform: translateY(0) rotate(-45deg);
+        top: 5px;
+        left: 4px;
+        color: #fff;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .nav-active {
+        display: block;
+    }
+
+    .nav-active li {
+        margin-top: 30px;
+    }
+
+    .nav-active li:first-child {
+        margin-top: 100px;
+    }
+
+    .black {
+        /* position: fixed;
+    right: 0; */
+        width: 100%;
+        height: 100vh;
+        background-color: #000;
+        z-index: 1;
+        text-align: center;
+        /* display: inline-block; */
+    }
+
+    /*section.menu*/
+
+    .menu {
+        padding: 150px 0;
+    }
+
+    /*section.veg*/
+
+    .veg {
+        padding: 100px 0;
+    }
+
+    /*section info*/
+
+    .info {
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+
+    .info-flex {
+        margin-top: 30px;
+        flex-direction: column;
+    }
+
+    .info-left {
+        margin-bottom: 30px;
+    }
+
+    .info-flex img {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+}
+
+/*-------------------------------
+rレスポンシブ　375まで
+-------------------------------*/
+@media (max-width: 375px) {
+    .menu ul {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    
+    .veg ul {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    
+    .info-title {
+        font-size: 30px;
+    }
+}

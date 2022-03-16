@@ -1,0 +1,745 @@
+@charset "utf-8";
+
+/* 共通
+-----------------------------------------------------*/
+body {
+  background-color: #EEECD2;
+}
+
+h2 {
+  font-size: 20px;
+  text-align: center;
+  line-height: 1.25;
+  color: #1B7C00;
+  /* font-weight: 600; */
+}
+
+h2 span {
+  vertical-align: top;
+}
+
+section {
+  width: 100%;
+  padding: 100px 30px;
+  margin: 100px auto;
+}
+
+section .wrapper {
+  text-align: center;
+}
+
+.button {
+  /* width: 300px; */
+  display: block;
+  margin: 0 auto;
+  padding: 20px 0;
+  border-radius: 50px;
+  background-color: #28A1B5;
+  color: #fff;
+  line-height: 1.78;
+  font-size: 14px;
+  text-align: center;
+  transition: 0.5s;
+  width: 260px;
+}
+
+.button:hover {
+  transform: scale(1.1);
+  background-color: #e29463;
+}
+
+.p-br {
+  display: none;
+}
+
+
+/* header
+-----------------------------------------------------*/
+.top {
+  height: 100vh;
+  /* minheightからheightに変更 */
+  position: relative;
+  overflow: hidden;
+  /* background-image: url(../img/main_bottom.png); */
+  /* background-position: center bottom 30px; */
+  /* background-size: auto 30%;  */
+  /* background-size: 120%; */
+  text-align: center;
+}
+
+.top-img {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  z-index: 500;
+}
+
+.drawer-open span,
+.drawer-open span:before,
+.drawer-open span:after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 17px;
+  border-radius: 3px;
+  background: #fff;
+  transition: 0.5s;
+  position: absolute;
+}
+
+.drawer-open span:before {
+  background: #fff;
+  width: 25px;
+  left: -4px;
+  bottom: 8px;
+}
+
+.drawer-open span:after {
+  background: #fff;
+  width: 25px;
+  top: 8px;
+  left: -4px;
+}
+
+.title1 {
+  width: 270px;
+  position: absolute;
+  z-index: 20;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.title2 {
+  position: absolute;
+  top: 45%;
+  width: 100%;
+  font-size: 16px;
+  text-align: center;
+  color: #fff;
+  /* left: 50%; */
+  /* transform: translate(-50%, -50%); */
+  z-index: 20;
+
+}
+
+.title2::before {
+  content: '';
+  /*何も入れない*/
+  display: inline-block;
+  /*忘れずに！*/
+  width: 50px;
+  /*画像の幅*/
+  height: 50px;
+  /*画像の高さ*/
+  background-image: url(../img/tonbo.png);
+  background-size: contain;
+  vertical-align: middle;
+}
+
+.title2::after {
+  content: '';
+  /*何も入れない*/
+  display: inline-block;
+  /*忘れずに！*/
+  width: 50px;
+  /*画像の幅*/
+  height: 50px;
+  /*画像の高さ*/
+  background-image: url(../img/tori.png);
+  background-size: contain;
+  vertical-align: middle;
+}
+
+.kometitle {
+  width: 150px;
+}
+
+
+
+/*スライダーのためのcss
+-----------------------------------------------------*/
+
+/*背景画像設定*/
+
+.slider-item01 {
+  background: url(../img/boss2.png);
+}
+
+.slider-item02 {
+  background: url(../img/fujiwaratatuya2.png);
+}
+
+.slider-item03 {
+  background: url(../img/kaguranohito2.png);
+}
+
+.slider-item04 {
+  background: url(../img/komekids2.png);
+}
+
+.slider-item05 {
+  background: url(../img/sake2.png);
+}
+
+.slider-item06 {
+  background: url(../img/come6.png);
+}
+
+.slider-item {
+  width: 100%;
+  /*各スライダー全体の横幅を画面の高さいっぱい（100%）にする*/
+  height: 40vh;
+  /*各スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
+  background-repeat: no-repeat;
+  /*背景画像をリピートしない*/
+  background-position: center;
+  /*背景画像の位置を中央に*/
+  background-size: contain;
+  /*背景画像が.slider-item全体を覆い表示*/
+}
+
+
+
+/* section info
+-----------------------------------------------------*/
+.info {
+  position: relative;
+  background-color: #D8E7B2;
+  background-image: url(../img/section1_top.png), url(../img/section1_bottom.png);
+  background-position: top center, center bottom -1px;
+  background-size: contain;
+  text-align: center;
+  padding-top: 100px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.info p {
+  line-height: 2.25;
+  width: 300px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.info a {
+  margin-top: 50px;
+}
+
+.bg-img {
+  background-image: url(../img/bigcome.png);
+  background-position: top center;
+  background-size: contain;
+}
+
+.inekari {
+  position: absolute;
+  width: 100px;
+  bottom: 400px;
+  left: 10px;
+  z-index: 500;
+}
+
+.gohan {
+  width: 100px;
+  position: absolute;
+  top: 20px;
+  right: 0;
+  z-index: 500;
+}
+
+
+/* Avoid Chrome to see Safari hack */
+/* @supports (-webkit-touch-callout: none) {
+  body { */
+/* The hack for Safari */
+/* height: -webkit-fill-available;
+  }
+} */
+
+
+
+/* section rice
+-----------------------------------------------------*/
+.rice {
+  position: relative;
+  background-color: #fff;
+  margin: 0;
+  margin-top: 50px;
+}
+
+.rice h2 {
+  margin-bottom: 40px;
+}
+
+.rice-top {
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  left: 0;
+}
+
+.rice-bottom {
+  width: 100%;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+}
+
+.rice-img {
+  display: none;
+}
+
+.graf {
+  margin: 50px 0;
+}
+
+h4 {
+  /* font-weight: normal; */
+  font-size: 18px;
+}
+
+.kome {
+  width: 22px;
+}
+
+.kome-list {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 50px;
+  justify-content: center;
+}
+
+.kome-list p {
+  line-height: 1.25;
+}
+
+.kome-item {
+  margin-left: 15px;
+  width: 180px;
+}
+
+.kome-item p:first-of-type {
+  margin: 10px 0;
+}
+
+
+
+/* section voice
+-----------------------------------------------------*/
+.voice {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 100px;
+}
+
+.voice a {
+  /* width: 300px; */
+  margin-bottom: 100px;
+}
+
+.voice-list {
+  padding: 0;
+}
+
+.voice-list div+div {
+  margin-top: 50px;
+}
+
+
+
+/* section kogen
+-----------------------------------------------------*/
+.kogen {
+  position: relative;
+  text-align: center;
+  background-color: #B5B4A5;
+  margin-top: 0;
+  padding-top: 150px;
+  background-image: url(../img/section3_top.png), url(../img/section3_bottom.png);
+  background-position: center top -4px, center bottom -4px;
+  background-size: contain;
+}
+
+.kogen a {
+  margin-top: 50px;
+}
+
+.kogen p {
+  color: #fff;
+  margin-bottom: 50px;
+}
+
+.kogen h2 {
+  font-size: 18px;
+  margin-bottom: 50px;
+}
+
+video {
+  max-width: 100%;
+  width: 850px;
+  vertical-align: bottom;
+}
+
+
+
+
+
+
+
+
+
+
+/* レスポンシブ
+-----------------------------------------------------*/
+@media (min-width: 600px) {
+
+
+
+  /* section info
+---------------------------------*/
+
+  .inekari {
+    width: 150px;
+    bottom: 250px;
+    left: 50px;
+  }
+
+  .gohan {
+    width: 150px;
+  }
+
+
+  /* section rice
+---------------------------------*/
+  .rice {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    margin-top: 100px;
+  }
+
+  .rice h2 {
+    margin-bottom: 50px;
+  }
+
+  .rice-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .rice-img {
+    display: block;
+    /* width: 46%; */
+  }
+
+  .kome-right {
+    /* width: 46%; */
+    width: 80%;
+  }
+
+  .kome {
+    width: 30px;
+  }
+
+  .kome-item p {
+    width: 200px;
+  }
+
+  .pc-kome1 {
+    margin-top: 50px;
+  }
+
+  .pc-kome1,
+  .pc-kome2 {
+    display: flex;
+    justify-content: center;
+  }
+
+  .p-slick {
+    display: none;
+  }
+
+  .graf {
+    margin-top: 50px;
+  }
+
+
+
+  /* section voice
+---------------------------------*/
+
+  .voice {
+    padding: 50px 30px 0;
+    margin: 0;
+  }
+
+  .voice a {
+    margin-bottom: 100px;
+  }
+
+  .voice-list {
+    display: flex;
+    justify-content: center;
+  }
+
+  .voice-list div+div {
+    margin-top: 0;
+    margin-left: 50px;
+  }
+
+  .voice1,
+  .voice3 {
+    margin-top: -50px;
+  }
+}/* 600ここまで */
+
+
+
+
+
+@media (min-width: 750px) {
+  .title2 {
+    font-size: 20px;
+  }
+}
+
+
+
+
+
+@media (min-width: 1025px) {
+
+  /* 共通
+---------------------------------*/
+  .title1 {
+    position: initial;
+    width: 200px;
+    transform: translate(0);
+  }
+
+  .title2 {
+    top: 40%;
+    font-size: 30px;
+  }
+
+
+  .title2::before {
+    width: 100px;
+    /*画像の幅*/
+    height: 100px;
+    /*画像の高さ*/
+  }
+
+  .title2::after {
+    width: 100px;
+    /*画像の幅*/
+    height: 100px;
+    /*画像の高さ*/
+  }
+
+  h2 {
+    font-size: 30px;
+    margin-bottom: 100px;
+    line-height: 1.25;
+  }
+
+  .t-br {
+    display: none;
+  }
+
+  .p-br {
+    display: block;
+  }
+
+  .button {
+    font-size: 18px;
+    width: 300px;
+  }
+
+  .slider {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    /* display: flex;
+  justify-content: center; */
+  }
+
+  section {
+    padding: 100px 150px;
+  }
+
+  .kometitle {
+    width: 300px;
+    margin-bottom: -20px;
+    margin-right: 1rem;
+  }
+
+  /* header
+---------------------------------*/
+  .title1 {
+    width: 200px;
+    position: initial;
+    transform: translate(0);
+  }
+
+  /* section info
+---------------------------------*/
+  .info {
+    margin-top: 100px;
+    margin-bottom: 0;
+  }
+
+  .info .slider {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .info h2 {
+    margin-bottom: 50px;
+    margin-top: 50px;
+  }
+
+  .info p {
+    width: auto;
+    margin-top: 0;
+    font-size: 20px;
+  }
+
+  .info a {
+    margin-top: 100px;
+  }
+
+  .bg-img {
+    padding: 50px;
+  }
+
+  .inekari {
+    width: 250px;
+    bottom: 100px;
+    left: 100px;
+  }
+
+  .gohan {
+    width: 250px;
+  }
+
+  /* section rice
+---------------------------------*/
+  .p-slick {
+    display: none;
+  }
+
+  .rice {
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+
+  .rice h2 {
+    margin-bottom: 150px;
+    padding-top: 100px;
+  }
+
+  .rice-content {
+    flex-direction: initial;
+  }
+
+  .rice-img {
+    width: 46%;
+  }
+
+  .graf {
+    margin-top: 0;
+  }
+
+  .kome-right {
+    width: 46%;
+  }
+
+  /* section voice
+---------------------------------*/
+  .voice {
+    padding-top: 100px;
+  }
+
+  .voice1,
+  .voice3 {
+    margin-top: -200px;
+  }
+
+  /* section kogen
+---------------------------------*/
+
+  .kogen {
+    padding-bottom: 200px;
+  }
+
+  .kogen p {
+    font-size: 25px;
+  }
+
+  .kogen a {
+    margin-top: 100px;
+  }
+
+  .kogen h2 {
+    font-size: 25px;
+    margin-bottom: 100px;
+    padding-top: 200px;
+  }
+
+}/* 1025ここまで */
+
+
+
+
+
+@media (min-width: 1800px) {
+
+  .inekari {
+    width: 300px;
+    left: 250px;
+  }
+
+  .gohan {
+    width: 400px;
+  }
+
+  .bg-img {
+    padding: 150px;
+  }
+
+  .kome {
+    width: 44px;
+  }
+
+  .rice {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+
+  .pc-kome1,
+  .pc-kome2 {
+    justify-content: space-between;
+  }
+
+  .kogen h2 {
+    font-size: 30px;
+  }
+
+}/* 1800ここまで */
+
+
+
+@media not all and (min-width: 321px) {
+  .info p {
+    font-size: 14px;
+    width: 260px;
+  }
+}

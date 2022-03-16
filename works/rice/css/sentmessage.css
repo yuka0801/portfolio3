@@ -1,0 +1,128 @@
+@charset "utf-8";
+
+/* 共通
+-----------------------------------------------------*/
+
+body {
+    background-color: #EEECD2;
+}
+
+/* header
+-----------------------------------------------------*/
+/* .drawer-open {
+    margin-bottom: 15vh;
+    margin-right: 30px;
+} */
+
+.drawer-open span,
+.drawer-open span:before,
+.drawer-open span:after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 17px;
+  border-radius: 3px;
+  background: #515151;
+  transition: 0.5s;
+  position: absolute;
+}
+
+.drawer-open span:before {
+  background: #515151;
+  width: 25px;
+  left: -4px;
+  bottom: 8px;
+}
+
+.drawer-open span:after {
+  background: #515151;
+  width: 25px;
+  top: 8px;
+  left: -4px;
+}
+
+.title1 {
+    display: none;
+} 
+
+/* 
+
+.title1 p {
+    font-size: 14px;
+    margin-left: 25px;
+}
+*/
+
+.title2 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 50px;
+    padding-top: 150px;
+}
+
+/* contact
+-----------------------------------------------------*/
+
+.contact {
+    max-width: 1260px;
+    background-color: #fff;
+    border-radius: 150px;
+    padding: 100px 30px; 
+    margin: 45px auto 100px;
+} 
+
+.contact-sendmessage {
+    line-height: 1.87;
+    margin-bottom: 50px;
+    display: block;
+    text-align: center; 
+}
+
+.contact-sendmessage p {
+    padding-bottom: 40px;
+}
+
+.button {
+    max-width: 260px;
+    display: block;
+    margin: 0 auto;
+    padding: 20px 0;
+    border-radius: 50px;
+    background-color: #28A1B5;
+    color: #fff;
+    line-height: 1.78;
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  .button:hover {
+    background-color: #e29463;
+    transition: 0.5s;
+    transform: scale(1.1)
+  }
+
+
+/* レスポンシブ 1025px~
+-----------------------------------------------------*/
+
+@media (min-width: 1025px) {
+
+    body {
+        font-size: 20px;
+    }
+
+    .title1 {
+        display: block;
+        width: 200px;
+    }
+
+    .title2 {
+        font-size: 35px;
+        margin-bottom: 100px;
+    }
+
+    .button {
+        max-width: 300px;
+      }
+
+}

@@ -1,0 +1,176 @@
+@charset "utf-8";
+
+/* 共通
+-----------------------------------------------------*/
+body {
+    background-color: #EEECD2;
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+section {
+    background-color: #fff;
+    border-radius: 150px;
+    padding: 100px 30px 100px;
+    margin: 0 auto 100px;
+    max-width: 1260px;
+}
+
+/* video {
+    display: inline-block;
+} */
+
+
+
+/* header
+-----------------------------------------------------*/
+.top {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.top-img {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    z-index: 500;
+}
+
+.drawer-open span,
+.drawer-open span:before,
+.drawer-open span:after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 17px;
+  border-radius: 3px;
+  background: #515151;
+  transition: 0.5s;
+  position: absolute;
+}
+
+.drawer-open span:before {
+  background: #515151;
+  width: 25px;
+  left: -4px;
+  bottom: 8px;
+}
+
+.drawer-open span:after {
+  background: #515151;
+  width: 25px;
+  top: 8px;
+  left: -4px;
+}
+
+.title1 {
+    display: none;
+    /* width: 200px; */
+}
+
+.title2 {
+    position: absolute;
+    top: 45%;
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+    z-index: 20;
+    font-size: 16px;
+}
+
+
+
+/*========= 背景動画設定のCSS ===============*/
+#video-area {
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+#video {
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 177.77777778vh;
+    /* 16:9 の幅→16 ÷ 9 */
+    height: 56.25vw;
+    /* 16:9の幅 → 9 ÷ 16 */
+    min-height: 100%;
+    min-width: 100%;
+}
+
+.contents {
+    background-color: #EEECD2;
+    padding-top: 50px;
+}
+
+
+/* section mirai
+-----------------------------------------------------*/
+.mirai p {
+    line-height: 1.78;
+}
+
+.mirai p+p {
+    margin-top: 40px;
+}
+
+
+@media (min-width: 750px) {
+    .title2 {
+        font-size: 20px;
+    }
+}
+
+
+@media (min-width: 1025px) {
+
+    /* header
+---------------------------------*/
+    h2 {
+        font-size: 35px;
+        margin-bottom: 100px;
+    }
+
+    .title1 {
+        display: block;
+        width: 200px;
+    }
+
+    .title2 {
+        top: 40%;
+        font-size: 30px;
+        line-height: 1.5;
+    }
+
+    .contents {
+        padding-top: 100px;
+    }
+
+    .text {
+        font-size: 20px;
+    }
+
+    .mirai {
+        padding-left: 180px;
+        padding-right: 180px;
+    }
+
+
+
+}
+
+/* 1025ここまで */

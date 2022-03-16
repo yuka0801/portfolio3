@@ -1,0 +1,282 @@
+@charset "utf-8";
+
+/* 共通
+-----------------------------------------------------*/
+body {
+    background-color: #EEECD2;
+}
+
+/* header
+-----------------------------------------------------*/
+
+.drawer-open span,
+.drawer-open span:before,
+.drawer-open span:after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 17px;
+  border-radius: 3px;
+  background: #515151;
+  transition: 0.5s;
+  position: absolute;
+}
+
+.drawer-open span:before {
+  background: #515151;
+  width: 25px;
+  left: -4px;
+  bottom: 8px;
+}
+
+.drawer-open span:after {
+  background: #515151;
+  width: 25px;
+  top: 8px;
+  left: -4px;
+}
+
+.title1 {
+    display: none;
+} 
+
+.title2 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 50px;
+    padding-top: 200px;
+
+}
+
+/* contact
+-----------------------------------------------------*/
+
+.contact {
+    max-width: 1260px;
+    background-color: #fff;
+    border-radius: 150px;
+    padding: 100px 10px;
+    margin: 45px auto 100px;
+}
+
+.contact-text {
+    line-height: 1.87;
+    margin-bottom: 80px;
+    display: block;
+    text-align: center;
+}
+
+.accept-time {
+    margin-top: 30px;
+}
+
+.contact-tel {
+    margin-top: 10px;
+}
+
+dt {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+dl {
+    margin: 0 10%;
+}
+
+.req {
+    font-size: 10px;
+    background-color: #E53E45;
+    color: #fff;
+    margin-left: 6px;
+    padding: 1px 3px;
+    border-radius: 3px;
+}
+
+input,
+textarea {
+    width: 100%;
+    border: 1px solid #333;
+    border-radius: 4px;
+    padding: 0.5em;
+}
+
+input[name="お名前"] {
+    max-width: 240px;
+}
+
+input[type="email"] {
+    max-width: 300px;
+}
+
+textarea[name="メッセージ"] {
+    height: 200px;
+}
+
+.submit-button {
+    display: block;
+    width: 150px;
+    margin: 50px auto 0 auto;
+    padding: 15px 0;
+    border-radius: 50px;
+    background-color: #28A1B5;
+    color: #fff;
+    border: none;
+}
+
+.submit-button:hover {
+    background-color: #e29463;
+    transition: 0.5s;
+    transform: scale(1.1)
+}
+
+.dl-inner {
+    margin-bottom: 20px;
+}
+
+input {
+    border-radius: 10px;
+}
+
+textarea {
+    border-radius: 10px;
+}
+
+.sp {
+    display: inline;
+}
+
+.pr-button {
+    color: #fff;
+    background: #333;
+    width: 250px;
+    margin: 50px auto 0 auto;
+    border-radius: 4px;
+}
+.pr-button:hover {
+    border: 2px solid #333;
+    background: #fff;
+    color: #333;
+}
+
+
+/* Privacypolicy
+-----------------------------------------------------*/
+
+.privacy-title{
+    font-size: 16px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.scroll-area h2{
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+
+.scroll-area p{
+    font-size: 14px;
+    /* line-height: 1.87; */
+    padding-bottom: 20px;
+}
+
+.scroll-area-list {
+    padding-bottom: 20px;
+}
+
+.scroll-area ul {
+    font-size: 14px;
+    list-style-type: disc;
+    margin-left: 20px;
+}
+.mp {
+    display: none;
+}
+
+
+.scroll-area {
+    width: 80%;
+    height: 150px;
+    border: 1px solid rgb(85, 81, 81); 
+    overflow-y: scroll;     
+    /* overflow: auto; */
+    margin: 10px auto 10px auto; 
+    background-color: rgba(255, 255, 255, .5); 
+    padding: 1.5em;
+    border-radius: 8px;
+}
+
+/* .scroll-area::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #FA7644;
+} */
+
+/* レスポンシブ 750px~
+-----------------------------------------------------*/
+
+@media (min-width: 600px) {
+    .sp {
+        display: none;
+    }
+
+    dl {
+        margin: 0 20%;
+    }
+}
+
+
+/* レスポンシブ 1025px~
+-----------------------------------------------------*/
+
+@media (min-width: 1025px) {
+
+    body {
+        font-size: 20px;
+    }
+
+    .title1 {
+        display: block;
+        width: 200px;
+    }
+
+    .title2 {
+        padding-top: 300px;
+        font-size: 35px;
+        margin-bottom: 100px;
+    }
+
+    .dl-inner {
+        margin-bottom: 45px;
+    }
+
+    input[name="お名前"] {
+        max-width: 390px;
+    }
+
+    input[type="email"] {
+        max-width: 390px;
+    }
+
+    textarea[name="メッセージ"] {
+        max-width: 800px;
+        height: 200px;
+    }
+
+
+    /*privacy*/
+
+    .scroll-area {
+        /* font-size: 14px; */
+        width: 60%;
+    }
+    /* .scroll-area h2 {
+        font-size: 16px;
+    } */
+    .mp {
+        display: inline;
+    }
+
+
+}
+
+/* 1025ここまで */

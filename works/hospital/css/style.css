@@ -1,0 +1,327 @@
+@charset "utf-8";
+
+
+.big-img img {
+  width: 100%;
+}
+
+/*-----------------------
+div.top-img
+-----------------------*/
+
+.top-img {
+  background-color: #f9ad03;
+  padding: 50px;
+}
+
+.top-img .wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.top-img-small1 {
+  margin-right: 10px;
+  width: 50%;
+}
+
+.top-img-small2 {
+  margin-left: 10px;
+}
+
+.img-tel {
+  margin-bottom: 20px;
+}
+
+.top-img-small2 a img{
+  transition-duration: .3s;
+}
+
+.top-img-small2 a img:hover {
+  opacity: .9;
+  transition-duration: .3s;
+}
+
+/*-----------------------
+section.news
+-----------------------*/
+
+.news {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.news h2 {
+  padding-bottom: 35px;
+}
+
+
+.news h2,
+.news dl {
+  border-bottom: 1px solid #93BEE8;
+}
+
+dl {
+  margin-top: 10px;
+}
+
+dt {
+  color: #93BEE8;
+  font-weight: bold;
+
+}
+
+dt time {
+  font-size: 20px;
+}
+
+dt span {
+  color: #ffffff;
+  background-color: rgb(207, 45, 45);
+  border-radius: 30%;
+  font-size: 12px;
+  margin-left: 10px;
+  padding: 2px;
+  vertical-align: middle;
+}
+
+dd {
+  padding-bottom: 10px;
+}
+
+/*-----------------------
+section.guide
+-----------------------*/
+
+.guide .wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.guide {
+  background-image: url(../image/guide.png);
+  background-size: cover;
+  padding: 67px 0 59px;
+  max-width: 100%;
+}
+
+.guide-text-left {
+  color: #fff;
+  margin-right: 30px;
+}
+
+.guide-text-left h2 {
+  color: #fff;
+}
+
+.guide-text-right {
+  background-color: #fff;
+  padding: 30px;
+  transition-duration: .3s;
+}
+
+.guide-text-right:hover {
+  box-shadow: 3px 5px 10px;
+  transform: translate(-3px,-5px);
+  transition-duration: .3s;
+}
+
+.guide-text-right a {
+  color: #124D89;
+}
+
+/*-----------------------
+section.symptom
+-----------------------*/
+
+.symptom ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.symptom li {
+  background-color: #000;
+}
+
+.symptom li:hover img{
+  opacity: .7;
+  transition-duration: .2s;
+}
+
+/*-----------------------
+section.greeting
+-----------------------*/
+
+.greeting {
+  background-image: url(../image/greeting.png);
+  padding: 100px 30px;
+}
+
+.greeting .wrapper {
+  background-color: #fff;
+  padding: 60px;
+}
+
+.greeting-textbox {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.greeting-title {
+  border-right: 1px solid #124D89;
+  width: 240px;
+}
+
+.greeting-title h2 {
+  color: #124D89;
+  font-size: 32px;
+}
+
+.greeting-title h3 {
+  color: #124D89;
+  font-size: 24px;
+}
+
+.chatch {
+  font-size: 24px;
+  margin-left: 40px;
+}
+
+.greeting p {
+  line-height: 2.5;
+  color: #124D89;
+}
+
+/*-----------------------
+section.map-area
+-----------------------*/
+
+iframe {
+  width: 100%;
+}
+
+.map-text {
+  margin: 10px 0;
+}
+
+
+/*-----------------------
+レスポンシブ　　(max-width:800px)
+-----------------------*/
+
+@media (max-width:800px) {
+
+  /*section.guide*/
+
+  .guide .wrapper {
+    flex-direction: column;
+  }
+
+  .guide-text-left {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+
+  /*section.greeting*/
+
+  .greeting {
+    padding: 50px 30px;
+  }
+
+  .greeting-title {
+    width: 180px;
+  }
+
+  .greeting-title h2 {
+    font-size: 26px;
+  }
+
+  .greeting-title h3 {
+    font-size: 20px;
+  }
+
+  .chatch {
+    font-size: 18px;
+  }
+
+  .greeting p {
+    line-height: 2;
+  }
+
+}
+
+/*-----------------------
+レスポンシブ　　(max-width:666px)
+-----------------------*/
+
+@media (max-width:666px) {
+
+  /*共通*/
+
+  /*div top-img*/
+
+  .top-img {
+    padding: 0;
+  }
+
+  .top-img .wrapper{
+    flex-direction: column;
+    padding: 30px;
+  }
+
+  .top-img-small1 {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+
+  .top-img-small2 {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  /*section.symptom*/
+  .symptom ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /*section.greeting*/
+
+  .greeting .wrapper {
+    padding: 20px;
+  }
+
+  .greeting-textbox {
+    flex-direction: column;
+  }
+  
+  .greeting-title {
+    border-right: none;
+  }
+
+  .chatch {
+    margin-top: 10px;
+    margin-left: 0;
+  }
+
+  .greeting-title h3 {
+    font-size: 16px;
+    line-height: 1;
+  }
+  
+}
+
+/*-----------------------
+レスポンシブ　　(max-width:355px)
+-----------------------*/
+
+@media (max-width:355px) {
+  .chatch br{
+    display: none;
+  }
+
+  dt time {
+    font-size: 18px;
+  }
+}

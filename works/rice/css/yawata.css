@@ -1,0 +1,607 @@
+@charset "utf-8";
+
+/* 共通
+-----------------------------------------------------*/
+
+body {
+  background-color: #EEECD2;
+}
+
+
+/* header
+-----------------------------------------------------*/
+
+.top {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.top-img {
+  /* width: 2000px; */
+  width: 100%;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  z-index: 500;
+}
+
+.drawer-open span,
+.drawer-open span:before,
+.drawer-open span:after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 17px;
+  border-radius: 3px;
+  background: #fff;
+  transition: 0.5s;
+  position: absolute;
+}
+
+.drawer-open span:before {
+  background: #fff;
+  width: 25px;
+  left: -4px;
+  bottom: 8px;
+}
+
+.drawer-open span:after {
+  background: #fff;
+  width: 25px;
+  top: 8px;
+  left: -4px;
+}
+
+.title1 {
+  width: 270px;
+  position: absolute;
+  z-index: 20;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.title2 {
+  position: absolute;
+  top: 45%;
+  width: 100%;
+  font-size: 16px;
+  text-align: center;
+  color: #ffffff;
+  z-index: 20;
+}
+
+.title2::before {
+  content: '';
+  /*何も入れない*/
+  display: inline-block;
+  /*忘れずに！*/
+  width: 50px;
+  /*画像の幅*/
+  height: 50px;
+  /*画像の高さ*/
+  background-image: url(../img/tonbo.png);
+  background-size: contain;
+  vertical-align: middle;
+}
+
+.title2::after {
+  content: '';
+  /*何も入れない*/
+  display: inline-block;
+  /*忘れずに！*/
+  width: 50px;
+  /*画像の幅*/
+  height: 50px;
+  /*画像の高さ*/
+  background-image: url(../img/tori.png);
+  background-size: contain;
+  vertical-align: middle;
+}
+
+
+/*
+ topのスライダーのためのcss
+-----------------------------------------------------*/
+
+/*背景画像設定*/
+/* .slider-fv-item img {
+  width: 100%;
+  min-height: 100vh;
+  object-fit: cover;
+} */
+
+
+
+/* section spot
+-----------------------------------------------------*/
+
+.spot-title {
+  margin: 100px auto;
+  /* text-align: center; */
+  /* width: 150px; */
+  width: 130px;
+}
+
+.spot-contents {
+  width: 80%;
+  margin: 0 auto;
+  background-color: #fff;
+  background-image: url(../img/map_top.png), url(../img/map_bottom.png);
+  background-position: center top, center bottom -2px;
+  background-size: contain;
+  padding-bottom: 100px;
+}
+
+
+.map-img1 {
+  display: block;
+  width: 90%;
+  margin: 0 auto 50px;
+  padding-top: 80px;
+}
+
+.map-img2 {
+  display: none;
+}
+
+
+
+
+/* spot スライダーのためのcss */
+
+.spot h3 {
+  display: block;
+  margin-bottom: 25px;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.slider p {
+  width: 90%;
+  margin: 35px auto 0;
+  line-height: 1.87;
+  text-align: left;
+}
+
+
+.slider {
+  text-align: center;
+  /*横幅94%で左右に余白を持たせて中央寄せ*/
+  width: 94%;
+  margin: 0 auto;
+}
+
+.spot-list {
+  width: 70vw;
+  height: auto;
+  margin: 0 auto;
+}
+
+
+.slider img {
+  width: 70vw;
+  /*スライダー内の画像を70vwにしてレスポンシブ化*/
+  height: auto;
+  margin: 0 auto;
+}
+
+.slider .slick-slide {
+  transform: scale(0.8);
+  /*左右の画像のサイズを80%に*/
+  transition: all .5s;
+  /*拡大や透過のアニメーションを0.5秒で行う*/
+  opacity: 0.5;
+  /*透過50%*/
+}
+
+
+.slider .slick-slide.slick-center {
+  transform: scale(1);
+  /*中央の画像のサイズだけ等倍に*/
+  opacity: 1;
+  /*透過なし*/
+}
+
+
+/*矢印の設定*/
+
+/*戻る、次へ矢印の位置*/
+.slick-prev,
+.slick-next {
+  position: absolute;
+  /*絶対配置にする*/
+  top: 42%;
+  cursor: pointer;
+  /*マウスカーソルを指マークに*/
+  outline: none;
+  /*クリックをしたら出てくる枠線を消す*/
+  border-top: 2px solid #666;
+  /*矢印の色*/
+  border-right: 2px solid #666;
+  /*矢印の色*/
+  height: 15px;
+  width: 15px;
+}
+
+.slick-prev {
+  /*戻る矢印の位置と形状*/
+  left: -1.5%;
+  transform: rotate(-135deg);
+}
+
+.slick-next {
+  /*次へ矢印の位置と形状*/
+  right: -1.5%;
+  transform: rotate(45deg);
+}
+
+/*ドットナビゲーションの設定*/
+
+.slick-dots {
+  text-align: center;
+  margin: 20px 0 0 0;
+}
+
+.slick-dots li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.slick-dots button {
+  color: transparent;
+  outline: none;
+  width: 8px;
+  /*ドットボタンのサイズ*/
+  height: 8px;
+  /*ドットボタンのサイズ*/
+  display: block;
+  border-radius: 50%;
+  background: #ccc;
+  /*ドットボタンの色*/
+}
+
+.slick-dots .slick-active button {
+  background: #333;
+  /*ドットボタンの現在地表示の色*/
+}
+
+
+/* section animal
+-----------------------------------------------------*/
+
+/*スライダーのためのcss*/
+.slider2 img {
+  width: 100%;
+  /*スライダー内の画像を横幅100%に*/
+  height: auto;
+}
+
+/*slickのJSで書かれるタグ内、スライド左右の余白調整*/
+
+.slider2 .slick-slide {
+  margin: 0 10px;
+  /*スライド左右の余白調整*/
+}
+
+
+/* ----------------- */
+.animal {
+  margin-bottom: 100px;
+}
+
+.animal h2 {
+  width: 270px;
+  margin: 100px auto 80px;
+}
+
+
+/* section event 
+-----------------------------------------------------*/
+
+.event {
+  background-color: #9B9B9B;
+  color: #fff;
+  position: relative;
+  padding: 120px 0 100px;
+}
+
+.event-top {
+  position: absolute;
+  top: -2px;
+}
+
+.event-title {
+  width: 180px;
+  margin: 0 auto;
+}
+
+.event-title img {
+  margin-bottom: 50px;
+}
+
+
+.event-list {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.event-list h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 45px;
+  margin-bottom: 35px;
+}
+
+.event .event-list img {
+  width: 70%;
+}
+
+.event-list p {
+  line-height: 1.87;
+  font-size: 16px;
+  line-height: 1.87;
+}
+
+.event-list li {
+  margin-bottom: 60px;
+}
+
+
+
+.event-bottom {
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+}
+
+
+/* footer ヤモリイラスト*/
+.footer {
+  position: relative;
+}
+
+.yamori {
+  position: absolute;
+  left: 60%;
+  max-width: 40%;
+}
+
+/* レスポンシブ　450px~755px
+-----------------------------------------------------*/
+
+@media (min-width: 450px) {
+  .yamori {
+    left: 60%;
+    width: 200px;
+  }
+}
+
+
+/* レスポンシブ　750px~1025px
+-----------------------------------------------------*/
+
+@media (min-width: 750px) {
+
+  .title2 {
+    font-size: 20px;
+  }
+
+  /* section spot */
+
+  .slider {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    padding: 0 30px;
+  }
+
+  .spot-title {
+    width: 156px;
+    margin: 120px auto;
+  }
+
+
+  .spot .slider h3 {
+    margin-bottom: 30px;
+    font-size: 18px;
+  }
+
+  .slider p {
+    margin: 35px auto 0;
+    line-height: 1.87;
+    /* padding: 0 10px; */
+  }
+
+  .map-img2 {
+    margin: 0 auto 80px;
+    padding-top: 150px;
+  }
+
+  .map-img1 {
+    display: none;
+  }
+
+  .map-img2 {
+    display: block;
+    width: 90%;
+    margin: 0 auto 80px;
+    padding-top: 150px;
+  }
+
+
+  .spot-list {
+    width: 100%;
+  }
+
+
+  /* section event */
+
+  .animal h2 {
+    width: 324px;
+  }
+
+  /* section event */
+
+  .event {
+    margin-top: 200px;
+    padding: 160px 0;
+  }
+
+  .event-title {
+    width: 216px;
+  }
+
+  .event-title img {
+    margin-bottom: 80px;
+  }
+
+  .event h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .event p {
+    font-size: 16px;
+  }
+
+  .event img {
+    width: 100%;
+    /* vertical-align: bottom; */
+  }
+
+  .event-list {
+    display: flex;
+    justify-content: space-around;
+  }
+
+
+  .event li:first-child {
+    margin-bottom: 0;
+  }
+
+
+  /* footer ヤモリイラスト*/
+
+  .yamori {
+    position: absolute;
+    left: 40%;
+    width: 200px;
+  }
+
+}
+
+
+/* レスポンシブ　1025px~1920
+-----------------------------------------------------*/
+@media (min-width: 1025px) {
+
+  /* 共通
+---------------------------------*/
+
+
+  /* header*/
+
+  .title1 {
+    position: initial;
+    width: 200px;
+    transform: translate(0);
+  }
+
+  .title2 {
+    top: 40%;
+    font-size: 30px;
+  }
+
+
+  .title2::before {
+    width: 100px;
+    /*画像の幅*/
+    height: 100px;
+    /*画像の高さ*/
+  }
+
+  .title2::after {
+    width: 100px;
+    /*画像の幅*/
+    height: 100px;
+    /*画像の高さ*/
+  }
+
+  /* section spot*/
+
+  .spot-title {
+    width: 195px;
+    margin: 140px auto;
+  }
+
+  .spot .slider h3 {
+    font-size: 20px;
+  }
+
+  .slider {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+  }
+
+  .spot-contents {
+    padding-bottom: 200px;
+  }
+
+  .map-img {
+    padding-top: 200px;
+  }
+
+  /* section animal*/
+  .animal {
+    margin-top: 200px;
+  }
+
+  .animal h2 {
+    width: 405px;
+  }
+
+  /* section event*/
+
+  .event {
+    padding: 200px 0;
+  }
+
+  .event-title {
+    width: 270px;
+  }
+
+  .event h3 {
+    font-size: 20px;
+  }
+
+
+  .event-title img {
+    margin-bottom: 100px;
+  }
+
+
+  /* footer ヤモリイラスト*/
+
+  .yamori {
+    position: absolute;
+    left: 40%;
+    width: 300px;
+  }
+
+}
+
+/* レスポンシブ　1920px~
+-----------------------------------------------------*/
+@media (min-width: 1920px) {
+
+  /* section event*/
+
+  .event {
+    padding: 250px 0;
+  }
+
+}

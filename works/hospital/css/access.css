@@ -1,0 +1,100 @@
+@charset "utf-8";
+
+
+/*-----------------------
+共通
+-----------------------*/
+h2 {
+  background-color: #93BEE8;
+  border-top: 5px solid #2B78C6;
+}
+
+/*-----------------------
+top-img
+-----------------------*/
+
+.top-img {
+  width: 100%;
+  background-image: url(../image/guide.png);
+  height: 250px;
+  background-position: center;
+}
+
+.top-img h1 {
+  color: #fff;
+  /* font-size: 40px; */
+  text-align: center;
+  line-height: 250px;
+}
+
+
+/*-----------------------
+iframe
+-----------------------*/
+
+.map {
+  max-width: 800px;
+  margin: 50px auto;
+}
+
+iframe {
+  max-width: 100%;
+}
+
+/*-----------------------
+table
+-----------------------*/
+
+table {
+  border-collapse: collapse;
+  width: 600px;
+  margin: 50px auto;
+}
+
+tr {
+  background-color: #E7F0FA;
+}
+
+tr:first-child {
+  background-color: #93BEE8;
+}
+
+th {
+  font-weight: normal;
+}
+
+.color {
+  color: #93BEE8;
+}
+
+/*-----------------------
+レスポンシブ
+-----------------------*/
+
+@media (max-width:630px) {
+  table {
+    max-width: 100%;
+    font-size: 13px;
+  }
+
+  .table-box {
+    padding: 0 10px;
+  }
+
+}
+
+
+/*-----------------------
+レスポンシブ
+-----------------------*/
+
+@media (max-width:375px) {
+
+  table {
+    width: 280px;
+  }
+
+  .th-left {
+    width: 120px;
+  }
+}

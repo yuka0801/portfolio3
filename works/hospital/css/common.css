@@ -1,0 +1,384 @@
+@charset "utf-8";
+
+
+/*-----------------------
+共通設定
+-----------------------*/
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 2;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+}
+
+ol,
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-weight: normal;
+    color: #2B78C6;
+    font-family: 'Cinzel', serif;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-family: 'Zen Maru Gothic', sans-serif;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+/*-----------------------
+header
+-----------------------*/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+header h1 {
+    line-height: 1;
+    width: 250px;
+    margin: 0 auto 0 20px;
+}
+
+.menu {
+    display: flex;
+}
+
+.nav-contact:hover {
+    opacity: .7;
+}
+
+.span1 {
+    color: rgb(46, 43, 43);
+    font-size: 19px;
+}
+
+.span2 {
+    font-size: 13px;
+    color: #f9ad03;
+}
+
+.menu__single {
+    width: 120px;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    letter-spacing: 0.2em;
+    color: #434d53;
+    padding: 20px 0 0;
+    border-left: 1px solid #c0c2c4;
+}
+
+.menu__single:first-child {
+    padding: 12px 0 10px;
+}
+
+.menu__single:hover {
+    opacity: .7;
+}
+
+.menu__last {
+    display: block;
+}
+
+.nav-contact {
+    background-color: #f9ad03;
+    color: #fff;
+    width: 300px;
+    height: 49px;
+    text-align: center;
+    line-height: 49px;
+    font-weight: bold;
+}
+
+.nav-contact:first-child {
+    margin-bottom: 2px;
+}
+
+header a {
+    display: flex;
+    flex-direction: column;
+}
+
+.home-logo {
+    width: 30px;
+    margin: 10px auto;
+}
+
+/*ドロップダウンメニュー*/
+.menu__second {
+    display: none;
+}
+
+.menu__single:hover .menu__second {
+    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 150px;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    background-color: rgb(231, 235, 217);
+    font-size: 18px;
+    width: 100%;
+    padding: 5px;
+    margin-left: -5px;
+}
+
+.menu__second li {
+    width: 300px;
+}
+
+.menu__second a {
+    color: rgb(41, 39, 39);
+}
+
+#gnavi2 {
+    display: none;
+}
+
+
+
+/*-----------------------
+footer
+-----------------------*/
+
+footer {
+    background-color: #93BEE8;
+    padding: 57px 70px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-access {
+    font-size: 14px;
+}
+
+.footer-access p,
+.footer-access small {
+    margin-left: 30px;
+}
+
+
+.footer-nav {
+    width: 230px;
+}
+
+.footer-nav p {
+    font-size: 22px;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 10px;
+    margin-bottom: 16px;
+}
+
+.footer-nav li {
+    font-size: 14px;
+    list-style-type: square;
+    margin-left: 15px;
+}
+
+.footer-nav a {
+    color: #fff;
+}
+
+.logo2 {
+    width: 300px;
+    margin-bottom: 50px;
+}
+
+
+
+/*-----------------------
+レスポンシブ　　(max-width:1100px)
+-----------------------*/
+
+@media (max-width:1100px) {
+
+
+    /*共通*/
+
+    h2 {
+        font-size: 30px;
+    }
+
+    header h1 {
+        width: 200px;
+        margin-left: 20px;
+    }
+
+    /*header nav*/
+
+    .nav-contact {
+        width: 170px;
+        font-size: 13px;
+        font-weight: normal;
+    }
+
+    .span1 {
+        font-size: 15px;
+    }
+
+    .span2 {
+        font-size: 11px;
+    }
+
+    .home-logo {
+        width: 25px;
+    }
+
+    .menu__single {
+        width: 80px;
+    }
+
+    /*footer*/
+
+    footer {
+        padding: 57px 30px;
+    }
+
+    .footer-nav {
+        width: 190px;
+    }
+
+    .logo2 {
+        width: 250px;
+    }
+}
+
+/*-----------------------
+レスポンシブ 768
+-----------------------*/
+
+@media (max-width: 768px) {
+
+    header {
+        height: 70px;
+    }
+
+    /*ハンバーガー*/
+    
+    .menu-btn {
+        margin-right: 10px;
+        width: 40px;
+        height: 40px;
+        padding: 10px 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: #f9ad03;
+        border-radius: 5px
+    }
+
+    .menu-btn span {
+        background: #fff;
+        display: block;
+        width: 100%;
+        height: 3px;
+    }
+
+    .close span:first-child {
+        transform: rotate(45deg) translate(4px, -5px);
+        transform-origin: left top;
+    }
+
+    .close span:nth-child(2) {
+        display: none;
+    }
+
+    .close span:last-child {
+        transform: rotate(-45deg) translate(3px, 5px); 
+        transform-origin: left bottom;
+    }
+
+
+    #gnavi {
+        display: none;
+    }
+
+    #gnavi2.open {
+        display: block;
+        position: absolute;;
+        width: 100%;
+        top: 70px;
+        right: 0;
+        background: #f9ad03;
+        padding: 0 ;
+        max-width: 100%;
+    }
+
+    .gnavi2__item {
+        border-bottom: 1px solid #fff;
+        text-indent: 2em;
+    }
+
+    .gnavi2__link {
+        padding: 5px 0;
+        display: block;
+        color: #fff;
+    }
+
+    /*footer*/
+
+    footer {
+        flex-direction: column;
+    }
+
+    .footer-nav {
+        margin-top: 20px;
+        padding-left: 30px;
+        width: 200px;
+    }
+
+    .footer-nav p {
+        font-size: 18px;
+        border-bottom: 1px solid #fff;
+        padding-bottom: 3px;
+        margin-bottom: 10px;
+    }
+
+}
+
+/*-----------------------
+レスポンシブ　 375
+-----------------------*/
+
+@media (max-width: 375px) {
+
+    header h1 {
+        width: 150px;
+    }
+    
+    h2 {
+        font-size: 24px;
+    }
+}
+
